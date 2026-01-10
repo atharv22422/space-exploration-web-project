@@ -1,6 +1,5 @@
-.style {
-
-  height: 30px;
-  width: 30px;
-  background-color:aqua ;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }

@@ -34,7 +34,7 @@ function Aboutus() {
         <div className={styles.section}>
           <div className={styles.imageWrapper}>
             <img
-              src="https://www.spacex.com/assets/images/mission/mission_feature.webp"
+              src="https://images-assets.nasa.gov/image/NHQ202512200002/NHQ202512200002~large.jpg?w=1536&h=1283&fit=crop&crop=faces%2Cfocalpoint"
               alt="Mission Overview"
             />
           </div>

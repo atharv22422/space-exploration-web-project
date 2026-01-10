@@ -1,0 +1,138 @@
+.featured {
+  padding: 80px 60px;
+  background: #fff;
+  color: #000;
+  font-family: "D-DIN", Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.header h2 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.filter {
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.arrow {
+  color: red;
+  margin-left: 6px;
+}
+
+/* MAIN GRID */
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 1fr;
+  gap: 20px;
+}
+
+/* CARDS */
+.card,
+.cardSmall {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.card img,
+.cardSmall img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.large {
+  height: 500px;
+}
+
+.medium {
+  height: 500px;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cardSmall {
+  height: 240px;
+}
+
+/* OVERLAY */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.2),
+    transparent
+  );
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.type {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  opacity: 0.8;
+}
+
+.read {
+  font-size: 0.75rem;
+  margin-bottom: 8px;
+}
+
+.overlay h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.overlay h4 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* BOTTOM ROW */
+.bottom {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.mini {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.mini img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.mini span {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.mini p {
+  font-size: 0.9rem;
+  font-weight: 600;
+}

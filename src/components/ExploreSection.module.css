@@ -1,0 +1,58 @@
+.wrapper {
+  padding: 80px 60px;
+  background: #fff;
+  font-family: "D-DIN", Arial, sans-serif;
+  color: #000;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* SOLAR CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  height: 465px;
+    margin-bottom: 150px;
+}
+
+.card {
+  position: relative;
+  
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card span {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+

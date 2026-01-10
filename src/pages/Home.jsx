@@ -1,8 +1,13 @@
 import Aboutus from "../components/Aboutus";
 import Footer from "../components/Footer";
+import FeaturedNews from "../components/FeaturedNews";
 import Navbar from "../components/Navbar";
 import styles from "./Home.module.css";
 import { useState, useEffect } from "react";
+import ExploreSection from "../components/ExploreSection";
+import Imageofday from "../components/Imageofday";
+import Whatsup from "../components/Whatsup";
+import Learnmore from "../components/Learnmore";
 
 function Home() {
   const heroSlides = [
@@ -62,6 +67,12 @@ function Home() {
       </section>
 
       <Aboutus />
+      <Whatsup />
+      <FeaturedNews />
+      <Learnmore />
+      <ExploreSection />
+      <Learnmore />
+      <Imageofday />
 
       <Footer />
     </div>
