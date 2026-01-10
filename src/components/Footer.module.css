@@ -1,0 +1,39 @@
+.footer {
+  background-color: black;        /* deep space vibe */
+  color: #f0f0fae6;               /* soft ivory text */
+  font-family: "Arial", sans-serif;
+  font-weight: 700;                /* bold for professional look */
+  text-align: center;
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;                        /* small spacing between links & text */
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 12px;                        /* spacing between links & separators */
+  font-size: 0.9rem;
+}
+
+.links a {
+  color: #f0f0fae6;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.links a:hover {
+  color: #8a6f5d;                   /* subtle clay/gold accent on hover */
+}
+
+.separator {
+  color: #888;                      /* subtle dot separator */
+  user-select: none;
+}
+
+.bottomText {
+  font-size: 0.8rem;
+  color: #aaa;                       /* muted text for subtlety */
+  margin: 0;
+}

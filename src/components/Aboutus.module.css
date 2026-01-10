@@ -1,0 +1,101 @@
+.aboutBMC {
+  background-color: #f0f0fae6;
+  color: black;
+  font-family: "D-DIN", "DIN", "Arial", sans-serif;
+  padding: 130px 20px;
+}
+
+.heading {
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: left;
+  line-height: 75px;
+}
+
+.intro {
+  text-align:left;
+  font-size: 1rem;
+  color: black;
+  max-width: 800px;
+  
+  line-height: 1.6;
+}
+
+/* Stats Cards */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.card {
+  background-color: #f8f8f8;
+  padding: 20px 30px;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 140px;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+}
+
+/* Sections: Alternating Image + Text */
+.section {
+  display: flex;
+
+  gap: 40px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+  height: 500px;
+}
+
+.imageWrapper {
+  flex: 1;
+  min-width: 250px;
+  padding-bottom:400px ;
+}
+
+.imageWrapper img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  height: 400px;
+}
+
+.text {
+  flex: 1;
+  min-width: 250px;
+
+}
+
+.text h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.text ul {
+  padding-left: 20px;
+  margin: 0;
+  list-style-type: disc;
+  color: #555;
+}
+
+.text ul li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
