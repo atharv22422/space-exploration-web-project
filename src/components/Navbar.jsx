@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logoRemovebg from "../assets/logoRemovebg.png";
 import styles from "./Navbar.module.css";
 
 function Navbar() {
@@ -6,7 +7,7 @@ function Navbar() {
     <header className={styles.header}>
       <div className={styles.left}>
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/d/de/SpaceX-Logo.svg"
+          src={logoRemovebg}
           alt="SpaceX Logo"
           className={styles.spacexLogo}
         />

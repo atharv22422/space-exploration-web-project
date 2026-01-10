@@ -1,4 +1,5 @@
 import styles from "./Footer.module.css";
+import zoomedRemovebg from "../assets/zoomedRemovebg.png";
 
 export default function Footer() {
   return (
@@ -6,11 +7,7 @@ export default function Footer() {
       <div className={styles.top}>
         {/* LEFT BRAND */}
         <div className={styles.brand}>
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/d/de/SpaceX-Logo.svg" // add your white logo file here
-            alt="SpaceX White Logo"
-            className={styles.spacexLogo}
-          />
+          <img src={zoomedRemovebg} className={styles.spacexLogo} />
 
           <h2>National Aeronautics and Space Administration</h2>
 
