@@ -37,29 +37,29 @@ function Navbar() {
       `}
     >
       <div className={styles.left}>
-        <Link to="/Home" className={styles.logoLink}>
+        <Link to="/" className={styles.logoLink}>
           <img
             src={CroppedImage}
             alt="SpaceX Logo"
             className={styles.spacexLogo}
-          />
+          ></img>
         </Link>
 
         <nav className={styles.nav}>
-          <Link to="/live" className={styles.nondropdown}>
+          <Link to="/live-space" className={styles.nondropdown}>
             Live Space
           </Link>
 
           <div className={styles.dropdown}>
             <span>Explore Space</span>
             <div className={styles.menu}>
-              <Link to="/events">Space Events</Link>
+              <Link to="/space-events">Space Events</Link>
               <Link to="/missions">Missions</Link>
-              <Link to="/cosmic">Cosmic Activity</Link>
+              <Link to="/cosmic-activity">Cosmic Activity</Link>
             </div>
           </div>
 
-          <Link to="/earth" className={styles.nondropdown}>
+          <Link to="/space-for-earth" className={styles.nondropdown}>
             Space for Earth
           </Link>
 

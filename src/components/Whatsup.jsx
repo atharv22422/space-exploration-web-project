@@ -1,4 +1,5 @@
 import styles from "./Whatsup.module.css";
+import { Link } from "react-router-dom";
 
 export default function Whatsup() {
   return (
@@ -6,16 +7,14 @@ export default function Whatsup() {
       <div className={styles.container}>
         <div className={styles.left}>
           <span className={styles.label}>FEATURED VIDEO</span>
-
           <h1 className={styles.title}>What's Up?</h1>
-
           <p className={styles.description}>
             In January, skywatchers can observe Jupiter at its biggest and
             brightest all year. The Moon and stars join the show, making it an
             excellent month for night-sky viewing.
           </p>
 
-          <a href="#" className={styles.link}>
+          <Link to="/whats-up" className={styles.link}>
             Skywatching Tips
             <svg
               width="32"
@@ -31,11 +30,11 @@ export default function Whatsup() {
                 className={styles.arrowIcon}
               />
             </svg>
-          </a>
+          </Link>
         </div>
 
         {/* RIGHT VIDEO */}
-        <div className={styles.right}>
+        <div className={styles.rightbox}>
           <div className={styles.right}>
             <iframe
               src="https://www.youtube.com/embed/j3Ps1YbTjmk"

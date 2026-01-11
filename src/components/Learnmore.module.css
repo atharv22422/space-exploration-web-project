@@ -37,13 +37,13 @@
 }
 
 .title {
-  font-size: 4rem;
+  font-size: 64px;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
 .description {
-  font-size: 1rem;
+  font-size: 18px;
   line-height: 1.6;
   color: #e5e5e5;
   margin-bottom: 2rem;

@@ -1,5 +1,6 @@
 .wrapper {
   padding: 80px 60px;
+  padding-bottom: 20px;
   background: #fff;
   font-family: "D-DIN", Arial, sans-serif;
   color: #000;
@@ -10,26 +11,28 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .header h2 {
-  font-size: 1.6rem;
+  font-size: 2.6rem;
   font-weight: 700;
 }
 
 .link {
-  font-size: 0.9rem;
+  font-size:18px;
   font-weight: 600;
   cursor: pointer;
+  color: black;
+  text-decoration: none;
 }
 
 /* SOLAR CARDS */
 .cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 16px;
-  height: 465px;
+  height: 420px;
     margin-bottom: 150px;
 }
 
@@ -49,10 +52,11 @@
 .card span {
   position: absolute;
   bottom: 12px;
+  font-family: "D-DIN", Arial, sans-serif;
   left: 12px;
-  color: #fff;
+  color: #f0f0fae6;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 30px;
 }
 
 

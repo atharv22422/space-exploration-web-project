@@ -1,101 +1,159 @@
 .aboutBMC {
   background-color: #f0f0fae6;
-  color: black;
+  color: #111;
   font-family: "D-DIN", "DIN", "Arial", sans-serif;
-  padding: 130px 20px;
+  padding: 130px 60px 80px;
+}
+
+/* ===== TITLE ===== */
+.aboutus {
+  width: 100%;
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 80px;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 80px;
+  flex-wrap: wrap;
+}
+
+/* ===== TEXT ===== */
+.text {
+  flex: 1;
+  min-width: 280px;
 }
 
 .heading {
-  text-align: center;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 700;
-  margin-bottom: 20px;
-  text-align: left;
-  line-height: 75px;
+  line-height: 1.15;
+  margin-bottom: 16px;
 }
 
 .intro {
-  text-align:left;
-  font-size: 1rem;
-  color: black;
+  font-size: 18px;
+  line-height: 1.7;
   max-width: 800px;
-  
-  line-height: 1.6;
 }
 
-/* Stats Cards */
-.stats {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-bottom: 60px;
+/* ===== LIST ===== */
+.list {
+  margin-top: 20px;
+  padding-left: 22px;
+  font-size: 18px;
+  line-height: 2.2;
 }
 
-.card {
-  background-color: #f8f8f8;
-  padding: 20px 30px;
-  border-radius: 8px;
-  text-align: center;
-  min-width: 140px;
-}
-
-.card h3 {
-  font-size: 1.5rem;
-  color: #222;
-  margin-bottom: 5px;
-}
-
-.card p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0;
-}
-
-/* Sections: Alternating Image + Text */
-.section {
-  display: flex;
-
-  gap: 40px;
-  margin-bottom: 60px;
-  flex-wrap: wrap;
-  height: 500px;
-}
-
+/* ===== IMAGE ===== */
 .imageWrapper {
   flex: 1;
-  min-width: 250px;
-  padding-bottom:400px ;
+  min-width: 280px;
 }
 
 .imageWrapper img {
   width: 100%;
-  border-radius: 8px;
+  height: 460px;
   object-fit: cover;
-  height: 400px;
+  border-radius: 10px;
 }
 
-.text {
-  flex: 1;
-  min-width: 250px;
-
+/* ===== SVG ===== */
+.aboutusLink {
+  text-decoration: none;
+  display: inline-block;
 }
 
-.text h3 {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #222;
-  margin-bottom: 15px;
+.aboutus {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
 }
 
-.text ul {
-  padding-left: 20px;
-  margin: 0;
-  list-style-type: disc;
-  color: #555;
+/* SVG base */
+.arrowCircle {
+  fill: red;
+  transition: fill 0.3s ease;
 }
 
-.text ul li {
-  margin-bottom: 8px;
-  line-height: 1.5;
+.arrowIcon {
+  fill: #f0f0fae6;
+  transition: transform 0.3s ease;
+}
+
+.aboutusLink:hover .arrowCircle {
+  fill: #8b0000; /* dark red */
+}
+
+.aboutusLink:hover .arrowIcon {
+  transform: translateX(4px);
+}
+
+
+
+/* ===== MANIFESTO ===== */
+.aboutSection {
+  width: 100%;
+  padding: 70px 20px 40px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.aboutText strong {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #000;
+}
+
+.aboutSection::before {
+  content: "";
+  width: 60px;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+}
+
+.aboutText {
+  max-width: 880px;
+  text-align: center;
+  font-size: 1.35rem;
+  line-height: 1.85;
+  font-weight: 400;
+  color: #333;
+}
+
+
+.imageWrapper img {
+  transition: transform 0.3s ease;
+}
+
+.imageWrapper img:hover {
+  transform: scale(1.03);
+}
+
+
+.aboutusLink {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+.aboutus {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: black;
+  cursor: default;
 }

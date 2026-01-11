@@ -1,5 +1,5 @@
-import React from "react";
 import styles from "./Learnmore.module.css";
+import { Link } from "react-router-dom";
 
 const Learnmore = () => {
   return (
@@ -22,9 +22,11 @@ const Learnmore = () => {
           missions to the Moon with Artemis.
         </p>
 
-        <button className={styles.button}>
-          Learn More <span className={styles.arrow}>→</span>
-        </button>
+        <Link to="/live-space">
+          <button className={styles.button}>
+            Learn More <span className={styles.arrow}>→</span>
+          </button>
+        </Link>
       </div>
     </section>
   );

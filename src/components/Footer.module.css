@@ -47,16 +47,20 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
+ 
 }
 
 .links ul {
   list-style: none;
   padding: 0;
+  
 }
 
 .links li {
   margin-bottom: 18px;
   cursor: pointer;
+   color: white;
+   text-decoration: none;
 }
 
 /* SOCIAL */
@@ -137,4 +141,13 @@
 
 .link:hover .arrowCircle {
   fill: #e5e5e5;
+}
+
+.navLink {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Optional: keep same color as text */
+}
+
+.navLink:hover {
+  color: #e10600; /* Optional: hover color */
 }
