@@ -1,19 +1,54 @@
 import { Link } from "react-router-dom";
-import logoRemovebg from "../assets/logoRemovebg.png";
+import CroppedImage from "../assets/CroppedImage.png";
 import styles from "./Navbar.module.css";
+import { useState, useEffect } from "react";
 
 function Navbar() {
+  const [hideHeader, setHideHeader] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  let lastScrollY = 0;
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // background control
+      setScrolled(currentScrollY > 50);
+
+      if (currentScrollY > lastScrollY && currentScrollY > 80) {
+        setHideHeader(true); // scrolling down
+      } else {
+        setHideHeader(false); // scrolling up
+      }
+
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className={styles.header}>
+    <header
+      className={`${styles.header} 
+        ${hideHeader ? styles.hide : ""} 
+        ${scrolled ? styles.scrolled : ""}
+      `}
+    >
       <div className={styles.left}>
-        <img
-          src={logoRemovebg}
-          alt="SpaceX Logo"
-          className={styles.spacexLogo}
-        />
+        <Link to="/Home" className={styles.logoLink}>
+          <img
+            src={CroppedImage}
+            alt="SpaceX Logo"
+            className={styles.spacexLogo}
+          />
+        </Link>
 
         <nav className={styles.nav}>
-          <Link to="/live">Live Space</Link>
+          <Link to="/live" className={styles.nondropdown}>
+            Live Space
+          </Link>
 
           <div className={styles.dropdown}>
             <span>Explore Space</span>
@@ -24,7 +59,9 @@ function Navbar() {
             </div>
           </div>
 
-          <Link to="/earth">Space for Earth</Link>
+          <Link to="/earth" className={styles.nondropdown}>
+            Space for Earth
+          </Link>
 
           <div className={styles.dropdown}>
             <span>Learn Space</span>

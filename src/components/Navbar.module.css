@@ -1,49 +1,103 @@
+/* ================= HEADER ================= */
+
 .header {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 24px 15px;
+  height: 65px;
+  padding: 24px 40px;
   background: transparent;
   z-index: 100;
+
+  opacity: 1;
+
+  transition:
+    transform 0.45s ease,
+    opacity 0.35s ease,
+    background-color 0.4s ease;
 }
+
+.hide {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.scrolled {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* ================= LEFT ================= */
 
 .left {
   display: flex;
-  align-items: center;
+ align-items: flex-start; 
   gap: 30px;
-  height: 38px;
-}
 
+}
 
 .spacexLogo {
   width: 160px;
   filter: brightness(0) invert(1);
+  opacity: 1;
+height: 30px;
+  transition:
+    filter 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* logo hover → extra bright */
+.logoLink:hover .spacexLogo {
+  filter: brightness(0) invert(1) drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 }
 
 
+
+/* ================= NAV ================= */
+
+.nondropdown {
+
+  padding-top: 2px;
+}
 .nav {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 36px;
-  align-self: flex-start;
+      padding-top: 2px;
 }
 
+/* default (slightly dim) */
 .nav a,
 .nav span {
   font-family: "D-DIN", "DIN", "Arial", sans-serif;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   font-size: 13px;
-  font-weight: bold;
-  color: #f0f0fae6;
+  font-weight: 700;
   text-decoration: none;
-
   position: relative;
+   color: rgba(255, 255, 255, 0.8);
+  transition: color 0.25s ease;
+  cursor: pointer;
 }
+
+/* dim all when nav is hovered */
+.nav:hover a,
+.nav:hover span {
+   color: rgba(255, 255, 255, 0.25);
+}
+
+/* hovered main item → bright */
+.nav a:hover,
+.nav span:hover {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* ================= DROPDOWN ================= */
 
 .dropdown {
   position: relative;
 }
+
 .dropdown::after {
   content: "";
   position: absolute;
@@ -51,23 +105,19 @@
   left: 0;
   width: 100%;
   height: 30px;
-  pointer-events: none; 
+  pointer-events: none;
 }
 
 .menu {
   position: absolute;
   top: 100%;
   left: 0;
-
   display: flex;
   flex-direction: column;
   gap: 12px;
-
   min-width: 220px;
-
-  background: none;
-  padding: 12px 0;
-
+  padding: 12px 0px;
+ background: transparent;
   opacity: 0;
   transform: translateY(-8px);
   pointer-events: none;
@@ -76,14 +126,25 @@
     opacity 0.25s ease,
     transform 0.25s ease;
 }
-.nav a,
-.nav span,
+
+/* dropdown items default */
 .menu a {
-  cursor: default;
+   color: rgba(255, 255, 255, 0.55);
+  transition: color 0.25s ease;
+  cursor: pointer;
 }
 
+/* dropdown item hover → bright */
+.menu a:hover {
+  color: rgba(255, 255, 255, 0.95);
+}
 
+/* dropdown label stays dim when open */
+.dropdown:hover > span {
+   color: rgba(255, 255, 255, 0.25);
+}
 
+/* show menu */
 .dropdown:hover .menu {
   opacity: 1;
   transform: translateY(0);
