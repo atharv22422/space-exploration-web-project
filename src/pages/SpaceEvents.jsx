@@ -1,12 +1,15 @@
 import Footer from "../components/Footer";
-import Herobanner from "../components/Herobanner";
-import Navbar from "../components/Navbar";
+import SecNavbar from "../components/SecNavbar";
+import SecHerobanner from "../components/SecHerobanner";
+
+import SecBody from "../components/SecBody";
 
 function SpaceEvents() {
   return (
     <>
-      <Navbar />
-      <Herobanner />
+      <SecNavbar />
+      <SecHerobanner />
+      <SecBody />
       <Footer />
     </>
   );

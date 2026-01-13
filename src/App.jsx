@@ -15,6 +15,7 @@ import FeaturedNews from "./pages/FeaturedNews";
 import FeatureBlogs from "./pages/FeatureBlogs";
 import ImageOfTheDay from "./pages/ImageOfTheDay";
 import JoinPage from "./pages/JoinPage";
+import Event from "./pages/Event";
 
 function App() {
   return (
@@ -36,6 +37,9 @@ function App() {
         <Route path="/feature-blogs" element={<FeatureBlogs />} />
         <Route path="/image-of-day" element={<ImageOfTheDay />} />
         <Route path="/join-page" element={<JoinPage />} />
+        <Route path="/event/:id" element={<Event />} />
+        <Route path="/missions/:id" element={<Event />} />
+        <Route path="/cosmic-activity/:id" element={<Event />} />
       </Routes>
     </Router>
   );

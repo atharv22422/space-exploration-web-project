@@ -1,12 +1,14 @@
-import Navbar from "../components/Navbar";
+import SecHerobanner from "../components/SecHerobanner";
 import Footer from "../components/Footer";
-import Herobanner from "../components/Herobanner";
+import SecMissions from "../components/SecMissions";
+import SecNavbar from "../components/SecNavbar";
 
 function SpaceMissions() {
   return (
     <>
-      <Navbar />
-      <Herobanner />
+      <SecNavbar />
+      <SecHerobanner />
+      <SecMissions />
       <Footer />
     </>
   );

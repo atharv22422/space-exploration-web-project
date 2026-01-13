@@ -1,12 +1,14 @@
-import Navbar from "../components/Navbar";
+import SecHerobanner from "../components/SecHerobanner";
 import Footer from "../components/Footer";
-import Herobanner from "../components/Herobanner";
+import SecCosmic from "../components/SecCosmic";
+import SecNavbar from "../components/SecNavbar";
 
 function CosmicActivity() {
   return (
     <>
-      <Navbar />
-      <Herobanner />
+      <SecNavbar />
+      <SecHerobanner />
+      <SecCosmic />
       <Footer />
     </>
   );

@@ -1,0 +1,73 @@
+/* ================= HEADER ================= */
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 65px;
+  padding: 0 40px;
+  background-color: black;
+
+  z-index: 100;
+
+  display: flex;
+  align-items: center;
+}
+
+/* ================= LEFT ================= */
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* ================= LOGO ================= */
+
+.spacexLogo {
+  width: 160px;
+  height: 30px;
+  filter: brightness(0) invert(1);
+}
+
+/* ================= NAV ================= */
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+/* ================= ACTIVE LABEL ================= */
+
+.activeLabel {
+  font-family: "D-DIN", "DIN", "Arial", sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: default;
+
+  position: relative;
+}
+
+/* subtle indicator line (like SpaceX / NASA dashboards) */
+.activeLabel::after {
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+/* logo hover → extra bright */
+.logoLink:hover .spacexLogo {
+  filter: brightness(0) invert(1) drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
+}
