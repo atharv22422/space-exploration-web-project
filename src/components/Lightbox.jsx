@@ -1,4 +1,4 @@
-import styles from "./Lightbox.module.css";
+import styles from "./lightbox.module.css";
 
 function Lightbox({ src, alt, onClose }) {
   return (
