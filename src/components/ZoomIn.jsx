@@ -1,4 +1,4 @@
-import styles from "./lightbox.module.css";
+import styles from "./ZoomIn.module..css";
 
 function Lightbox({ src, alt, onClose }) {
   return (

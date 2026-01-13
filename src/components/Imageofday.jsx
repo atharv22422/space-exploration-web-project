@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Imageofday.module.css";
-import Lightbox from "../components/Lightbox";
+import Lightbox from "./ZoomIn";
 import { Link } from "react-router-dom";
 
 const Imageofday = () => {

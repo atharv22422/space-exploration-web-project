@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import Lightbox from "../components/Lightbox";
+import Lightbox from "./ZoomIn";
 import styles from "./Aboutus.module.css";
 
 function Aboutus() {
