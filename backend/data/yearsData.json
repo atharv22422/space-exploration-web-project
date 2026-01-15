@@ -1,0 +1,28 @@
+[
+  {
+    "id": "2024-04-08",
+    "name": "Total Solar Eclipse",
+    "type": "solar-total",
+    "date": "2024-04-08",
+    "maxTimeUTC": "2024-04-08T18:18:00Z",
+    "path": [
+      { "lat": 14.5, "lng": -110.2, "umbra": 1.0 },
+      { "lat": 18.2, "lng": -100.1, "umbra": 1.0 },
+      { "lat": 22.4, "lng": -90.0,  "umbra": 0.8 },
+      { "lat": 26.0, "lng": -80.5,  "umbra": 0.6 }
+    ]
+  },
+  {
+    "id": "2026-08-12",
+    "name": "Total Solar Eclipse",
+    "type": "solar-total",
+    "date": "2026-08-12",
+    "maxTimeUTC": "2026-08-12T17:47:00Z",
+    "path": [
+      { "lat": 65.0, "lng": -40.0, "umbra": 1.0 },
+      { "lat": 60.0, "lng": -10.0, "umbra": 0.9 },
+      { "lat": 55.0, "lng": 20.0,  "umbra": 0.7 }
+    ]
+  }
+]
+
