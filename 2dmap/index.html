@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Astronomical Event Visibility Visualizer</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Left Panel with Map -->
+      <div class="left-panel">
+        <div class="map-container">
+          <div id="map2d"></div>
+          <div id="globe3d"></div>
+
+          <div class="view-toggle">
+            <button class="toggle-btn active" id="view2d">2D Map</button>
+            <button class="toggle-btn" id="view3d">3D Globe</button>
+          </div>
+
+          <div class="search-box">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search for city or place..."
+            />
+            <div id="searchResults" class="search-results"></div>
+          </div>
+
+          <div class="legend">
+            <div class="legend-title">Visibility Levels</div>
+            <div id="legendItems"></div>
+          </div>
+        </div>
+
+        <!-- Bottom Details Panel -->
+        <div class="bottom-panel" id="detailsPanel">
+          <div class="details-header">
+            <div>
+              <div class="location-title">Click on map to select location</div>
+              <div class="coordinates" id="coordinates">--°N, --°E</div>
+            </div>
+            <div class="timezone-info" id="timezoneInfo">Local Time</div>
+          </div>
+          <div class="details-grid" id="detailsContent">
+            <!-- Details will be populated here -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Events Panel -->
+      <div class="right-panel">
+        <div class="panel-header">
+          <h2>Astronomical Events</h2>
+          <div class="subtitle">Real-time visibility calculations</div>
+          <div class="time-controls">
+            <button id="prevEvent" class="time-btn">◀</button>
+            <div class="date-picker-container">
+              <input
+                type="date"
+                id="datePicker"
+                class="date-picker-input"
+                value=""
+              />
+            </div>
+            <button id="nextEvent" class="time-btn">▶</button>
+          </div>
+        </div>
+        <div class="events-list" id="eventsList">
+          <!-- Events will be populated here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading" id="loadingOverlay">
+      <div class="spinner"></div>
+      <div id="loadingText">Calculating visibility data...</div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/suncalc@1.9.0/suncalc.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/heatmap.js@2.0.5/build/heatmap.min.js"></script>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
