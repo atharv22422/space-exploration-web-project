@@ -1,0 +1,85 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+/* Background Image */
+.backgroundImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Dark overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.3)
+  );
+}
+
+/* Content */
+.content {
+  position: relative;
+  max-width: 600px;
+  padding: 4rem;
+  color: #ffffff;
+  z-index: 2;
+}
+
+.title {
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #e5e5e5;
+  margin-bottom: 2rem;
+}
+
+/* Button */
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.arrow {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content {
+    padding: 2rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+}
