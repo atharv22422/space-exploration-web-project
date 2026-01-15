@@ -1,12 +1,12 @@
-import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Herobanner from "../components/Herobanner";
+import Notdeveloped from "../components/Notdeveloped";
+import SecNavbar from "../components/SecNavbar";
 
 function Games() {
   return (
     <>
-      <Navbar />
-      <Herobanner />
+      <SecNavbar />
+      <Notdeveloped />
       <Footer />
     </>
   );

@@ -1,0 +1,175 @@
+/* ===== PAGE WRAPPER ===== */
+.page {
+  display: flex;
+  background-color: #f0f0fae6;
+  color: #111;
+  font-family: "D-DIN", "DIN", "Arial", sans-serif;
+  padding: 130px 60px 80px;
+  gap: 40px;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 280px;
+  padding-right: 30px;
+  border-right: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.filterGroup {
+  margin-bottom: 32px;
+}
+
+.filterGroup h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.filterGroup label {
+  display: block;
+  font-size: 15px;
+  line-height: 1.9;
+  cursor: pointer;
+}
+
+.filterGroup input {
+  margin-right: 8px;
+}
+
+/* ===== RESET BUTTON ===== */
+.reset {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid red;
+  background: transparent;
+  color: red;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.reset:hover {
+  background: red;
+  color: #fff;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main {
+  flex: 1;
+}
+
+/* ===== TOP BAR ===== */
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  font-size: 15px;
+}
+
+/* ===== VIEW TOGGLE ===== */
+.viewToggle {
+  display: flex;
+  gap: 20px;
+}
+.viewToggle button {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background: transparent;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.25s ease;
+}
+
+.viewToggle button:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.viewToggle .active {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+/* ===== LIST VIEW ===== */
+.list .card {
+  display: flex;
+  justify-content: space-between;
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+/* ===== GRID VIEW ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+.grid .card {
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+/* ===== CARD ===== */
+.card {
+  display: flex;
+  gap: 30px;
+}
+
+.card img {
+  width: 190px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.card img:hover {
+  transform: scale(1.04);
+}
+
+/* ===== TEXT ===== */
+.text {
+  flex: 1;
+}
+
+.type {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #444;
+}
+
+.text h3 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 10px 0 12px;
+  color: #000;
+}
+
+.text p {
+  font-size: 17px;
+  line-height: 1.7;
+  max-width: 820px;
+  color: #333;
+}
+
+.date {
+  font-size: 14px;
+  margin-top: 6px;
+  display: inline-block;
+  color: #555;
+}
+
+.cardLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}

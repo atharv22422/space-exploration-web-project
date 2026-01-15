@@ -16,7 +16,7 @@ function Aboutus() {
       <header className={styles.aboutHeader}>
         <Link to="/about-us" className={styles.aboutusLink}>
           <div className={styles.aboutus}>
-            About Us
+            About ORViS
             <svg
               width="40"
               height="40"
@@ -43,7 +43,7 @@ function Aboutus() {
           <h1 className={styles.heading}>Connecting Curiosity to the Cosmos</h1>
 
           <p className={styles.intro}>
-            At SpaceScope, our mission is to make space exploration accessible,
+            At ORViS, our mission is to make space exploration accessible,
             engaging, and meaningful. We transform complex astronomical data
             into intuitive experiences that inspire curiosity, learning, and
             discovery across all ages.
@@ -74,11 +74,11 @@ function Aboutus() {
       <div className={styles.section}>
         <div className={styles.imageWrapper}>
           <img
-            src="https://images-assets.nasa.gov/image/NHQ202512200002/NHQ202512200002~large.jpg"
+            src="https://plus.unsplash.com/premium_photo-1690571200236-0f9098fc6ca9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c3BhY2V8ZW58MHx8MHx8fDA%3D"
             alt="Vision of Discovery"
             onClick={() =>
               openLightbox(
-                "https://images-assets.nasa.gov/image/NHQ202512200002/NHQ202512200002~large.jpg"
+                "https://plus.unsplash.com/premium_photo-1690571200236-0f9098fc6ca9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c3BhY2V8ZW58MHx8MHx8fDA%3D"
               )
             }
           />
@@ -106,10 +106,10 @@ function Aboutus() {
       {/* ===== SECTION 3 : MANIFESTO ===== */}
       <section className={styles.aboutSection}>
         <p className={styles.aboutText}>
-          Space is not distant—it is constantly in motion around us.
+          Space is not distant, it is constantly in motion around us.
           <strong>
-            At SpaceScope, we simplify the vastness of the universe into
-            experiences that inform, inspire, and educate.
+            At ORViS, we simplify the vastness of the universe into experiences
+            that inform, inspire, and educate.
           </strong>
           By combining real-time space data, immersive visualizations, and
           thoughtful learning tools, we make complex cosmic phenomena accessible

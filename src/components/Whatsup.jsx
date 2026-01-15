@@ -7,7 +7,7 @@ export default function Whatsup() {
       <div className={styles.container}>
         <div className={styles.left}>
           <span className={styles.label}>FEATURED VIDEO</span>
-          <h1 className={styles.title}>What's Up?</h1>
+          <h1 className={styles.title}>Space in Motion</h1>
           <p className={styles.description}>
             In January, skywatchers can observe Jupiter at its biggest and
             brightest all year. The Moon and stars join the show, making it an

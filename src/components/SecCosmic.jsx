@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import styles from "./Missions.module.css"; // reuse same layout CSS
+import styles from "./SecCosmic.module.css"; // reuse same layout CSS
 
 export default function SecCosmic() {
   const [view, setView] = useState("list");
@@ -10,7 +10,7 @@ export default function SecCosmic() {
   ======================= */
   const cosmicEvents = [
     {
-      id: 1,
+      id: "solar-storm-g3",
       type: "SOLAR ACTIVITY | SOLAR STORM",
       title: "Strong Solar Storm (G3)",
       description:
@@ -18,21 +18,11 @@ export default function SecCosmic() {
       date: "Observed: Jan 14, 2026",
       visibility: "High Latitudes",
       image:
-        "https://www.nasa.gov/wp-content/uploads/2024/10/50999379344-b7db5dd107-o-1.jpg?resize=1536,1024",
+        "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001434/GSFC_20171208_Archive_e001434~orig.jpg?w=400&h=344&fit=crop&crop=faces%2Cfocalpoint",
     },
+
     {
-      id: 2,
-      type: "ATMOSPHERIC | AURORA",
-      title: "Aurora Borealis Intensification",
-      description:
-        "Enhanced auroral activity due to increased solar wind pressure.",
-      date: "Ongoing",
-      visibility: "Northern Hemisphere",
-      image:
-        "https://www.nasa.gov/wp-content/uploads/2024/10/50999379344-b7db5dd107-o-1.jpg?resize=1536,1024",
-    },
-    {
-      id: 3,
+      id: "grb-260112a",
       type: "HIGH-ENERGY | GAMMA-RAY BURST",
       title: "Short Gamma-Ray Burst (GRB 260112A)",
       description:
@@ -40,10 +30,10 @@ export default function SecCosmic() {
       date: "Detected: Jan 12, 2026",
       visibility: "Deep Space",
       image:
-        "https://www.nasa.gov/wp-content/uploads/2024/10/50999379344-b7db5dd107-o-1.jpg?resize=1536,1024",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Gamma_ray_burst.jpg/500px-Gamma_ray_burst.jpg",
     },
     {
-      id: 4,
+      id: "x-class-solar-flare-2026",
       type: "SOLAR ACTIVITY | SOLAR FLARE",
       title: "X-Class Solar Flare",
       description:
@@ -51,7 +41,7 @@ export default function SecCosmic() {
       date: "Observed: Jan 10, 2026",
       visibility: "Sun-facing Earth",
       image:
-        "https://www.nasa.gov/wp-content/uploads/2024/10/50999379344-b7db5dd107-o-1.jpg?resize=1536,1024",
+        "https://cdn.mos.cms.futurecdn.net/uqRSZnQLgaPw8Mx7csKQsX-970-80.jpg.webp",
     },
   ];
 

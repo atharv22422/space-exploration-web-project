@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import styles from "./Missions.module.css"; // reuse same CSS
+import styles from "./SecBody.module.css"; // reuse same CSS
 
 export default function SecBody() {
   const [view, setView] = useState("list");
@@ -10,81 +10,35 @@ export default function SecBody() {
   ======================= */
   const events = [
     {
-      id: 1,
+      id: "solar-eclipse-2024",
       category: "SOLAR SYSTEM | ECLIPSE",
       title: "Total Solar Eclipse",
       description:
-        "A total solar eclipse occurs when the Moon completely blocks the Sun, casting a shadow on Earth.",
+        "A total solar eclipse occurs when the Moon completely blocks the Sun.",
       date: "April 8, 2024",
       visibility: "North America",
       image:
-        "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/general/images/2023/06/s/solar-system-illustration-16x9-1.jpg?w=1536&h=864&fit=crop&crop=faces%2Cfocalpoint",
+        "https://static.toiimg.com/thumb/msid-109126932,imgsize-10936,width-400,resizemode-4/109126932.jpg",
     },
     {
-      id: 2,
+      id: "perseids-2025",
       category: "METEORS | SHOWER",
       title: "Perseids Meteor Shower",
-      description:
-        "One of the brightest meteor showers of the year, caused by debris from Comet Swift–Tuttle.",
+      description: "One of the brightest meteor showers of the year.",
       date: "Aug 12–13, 2025",
       visibility: "Northern Hemisphere",
       image:
-        "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/general/images/2023/06/s/solar-system-illustration-16x9-1.jpg?w=1536&h=864&fit=crop&crop=faces%2Cfocalpoint",
+        "https://assets.science.nasa.gov/dynamicimage/assets/science/psd/solar-system/skywatching/evergreen-images/Perseids_2024_Preston_Dyches.jpg",
     },
     {
-      id: 3,
-      category: "ATMOSPHERIC | AURORA",
-      title: "Aurora Borealis",
-      description:
-        "Natural light display produced by charged solar particles interacting with Earth's magnetic field.",
-      date: "Ongoing",
-      visibility: "High Latitude Regions",
+      id: "lunar-eclipse-2025",
+      category: "ECLIPSE | LUNAR",
+      title: "Total Lunar Eclipse",
+      description: "The Moon passes completely into Earth’s shadow.",
+      date: "Mar 14–15, 2025",
+      visibility: "Asia, Europe, Australia, Africa",
       image:
-        "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/general/images/2023/06/s/solar-system-illustration-16x9-1.jpg?w=1536&h=864&fit=crop&crop=faces%2Cfocalpoint",
-    },
-    {
-      id: 3,
-      category: "ATMOSPHERIC | AURORA",
-      title: "Aurora Borealis",
-      description:
-        "Natural light display produced by charged solar particles interacting with Earth's magnetic field.",
-      date: "Ongoing",
-      visibility: "High Latitude Regions",
-      image:
-        "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/general/images/2023/06/s/solar-system-illustration-16x9-1.jpg?w=1536&h=864&fit=crop&crop=faces%2Cfocalpoint",
-    },
-    {
-      id: 3,
-      category: "ATMOSPHERIC | AURORA",
-      title: "Aurora Borealis",
-      description:
-        "Natural light display produced by charged solar particles interacting with Earth's magnetic field.",
-      date: "Ongoing",
-      visibility: "High Latitude Regions",
-      image:
-        "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/general/images/2023/06/s/solar-system-illustration-16x9-1.jpg?w=1536&h=864&fit=crop&crop=faces%2Cfocalpoint",
-    },
-    {
-      id: 3,
-      category: "ATMOSPHERIC | AURORA",
-      title: "Aurora Borealis",
-      description:
-        "Natural light display produced by charged solar particles interacting with Earth's magnetic field.",
-      date: "Ongoing",
-      visibility: "High Latitude Regions",
-      image:
-        "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/general/images/2023/06/s/solar-system-illustration-16x9-1.jpg?w=1536&h=864&fit=crop&crop=faces%2Cfocalpoint",
-    },
-    {
-      id: 3,
-      category: "ATMOSPHERIC | AURORA",
-      title: "Aurora Borealis",
-      description:
-        "Natural light display produced by charged solar particles interacting with Earth's magnetic field.",
-      date: "Ongoing",
-      visibility: "High Latitude Regions",
-      image:
-        "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/general/images/2023/06/s/solar-system-illustration-16x9-1.jpg?w=1536&h=864&fit=crop&crop=faces%2Cfocalpoint",
+        "https://science.nasa.gov/wp-content/uploads/2023/08/total-eclipse.png",
     },
   ];
 
@@ -144,15 +98,10 @@ export default function SecBody() {
       [
         "Aurora Borealis",
         "Aurora Australis",
-        "Rainbow",
-        "Fogbow",
         "Solar Halo",
         "Lunar Halo",
         "Sun Dog (Parhelion)",
-        "Light Pillar",
-        "Mirage",
         "Fata Morgana",
-        "Green Flash",
         "Crepuscular Rays",
       ],
     ],

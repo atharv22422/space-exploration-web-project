@@ -1,12 +1,12 @@
-import Navbar from "../components/Navbar";
+import SecNavbar from "../components/SecNavbar";
 import Footer from "../components/Footer";
-import Herobanner from "../components/Herobanner";
+import Notdeveloped from "../components/Notdeveloped";
 
 function ExploreTab() {
   return (
     <>
-      <Navbar />
-      <Herobanner />
+      <SecNavbar />
+      <Notdeveloped />
       <Footer />
     </>
   );

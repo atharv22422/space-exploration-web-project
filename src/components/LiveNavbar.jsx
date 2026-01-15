@@ -1,9 +1,9 @@
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import CroppedImage from "../assets/CroppedImage.png";
-import styles from "./SecNavbar.module.css";
+import styles from "./LiveNavbar.module.css";
 
-function SecNavbar() {
+function LiveNavbar() {
   const location = useLocation();
 
   const [hideHeader, setHideHeader] = useState(false);
@@ -36,14 +36,12 @@ function SecNavbar() {
     const handleScroll = () => {
       const currentScroll = window.scrollY;
 
-      // background control
       setScrolled(currentScroll > 40);
 
-      // hide / show logic
       if (currentScroll > lastScrollY.current && currentScroll > 80) {
-        setHideHeader(true); // scrolling down
+        setHideHeader(true);
       } else {
-        setHideHeader(false); // scrolling up
+        setHideHeader(false);
       }
 
       lastScrollY.current = currentScroll;
@@ -61,20 +59,27 @@ function SecNavbar() {
       `}
     >
       <div className={styles.left}>
-        <Link to="/" className={styles.logoLink}>
-          <img
-            src={CroppedImage}
-            alt="SpaceX Logo"
-            className={styles.spacexLogo}
-          />
-        </Link>
+        {/* LOGO WITH RED DOT */}
+        <div className={styles.withDot}>
+          <Link to="/" className={styles.logoLink}>
+            <img
+              src={CroppedImage}
+              alt="SpaceX Logo"
+              className={styles.spacexLogo}
+            />
+          </Link>
+        </div>
 
+        {/* LABEL WITH RED DOT */}
         <nav className={styles.nav}>
-          <span className={styles.activeLabel}>{currentLabel}</span>
+          <div className={styles.withDot}>
+            <span className={styles.redDot} />
+            <span className={styles.activeLabel}>{currentLabel}</span>
+          </div>
         </nav>
       </div>
     </header>
   );
 }
 
-export default SecNavbar;
+export default LiveNavbar;

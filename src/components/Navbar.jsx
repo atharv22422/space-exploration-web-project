@@ -1,28 +1,26 @@
 import { Link } from "react-router-dom";
+import { useState, useEffect, useRef } from "react";
 import CroppedImage from "../assets/CroppedImage.png";
 import styles from "./Navbar.module.css";
-import { useState, useEffect } from "react";
 
 function Navbar() {
   const [hideHeader, setHideHeader] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
-  let lastScrollY = 0;
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      // background control
       setScrolled(currentScrollY > 50);
 
-      if (currentScrollY > lastScrollY && currentScrollY > 80) {
-        setHideHeader(true); // scrolling down
+      if (currentScrollY > lastScrollY.current && currentScrollY > 80) {
+        setHideHeader(true);
       } else {
-        setHideHeader(false); // scrolling up
+        setHideHeader(false);
       }
 
-      lastScrollY = currentScrollY;
+      lastScrollY.current = currentScrollY;
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -31,18 +29,13 @@ function Navbar() {
 
   return (
     <header
-      className={`${styles.header} 
-        ${hideHeader ? styles.hide : ""} 
-        ${scrolled ? styles.scrolled : ""}
-      `}
+      className={`${styles.header} ${hideHeader ? styles.hide : ""} ${
+        scrolled ? styles.scrolled : ""
+      }`}
     >
       <div className={styles.left}>
         <Link to="/" className={styles.logoLink}>
-          <img
-            src={CroppedImage}
-            alt="SpaceX Logo"
-            className={styles.spacexLogo}
-          ></img>
+          <img src={CroppedImage} alt="Logo" className={styles.spacexLogo} />
         </Link>
 
         <nav className={styles.nav}>

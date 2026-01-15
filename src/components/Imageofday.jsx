@@ -20,18 +20,24 @@ const Imageofday = () => {
         <div className={styles.textContent}>
           <span className={styles.today}>Today</span>
 
-          <h2 className={styles.heading}>Image Of The Day</h2>
+          <h2 className={styles.heading}>Through the Lens of Space</h2>
 
           <h3 className={styles.title}>
-            Best of 2025: Artemis II SLS (Space Launch System) Projected on
-            Washington Monument
+            NASA’s Pandora Small Satellite Launched
           </h3>
 
           <p className={styles.description}>
-            Images depicting NASA’s Space Launch System (SLS) rocket are
-            projected onto the Washington Monument as part of an event to kick
-            off the nation’s 250th birthday year, Wednesday, Dec. 31, 2025, in
-            Washington.
+            In this photo from early January 2026, teams prepare to encapsulate
+            NASA’s Pandora small satellite, NASA-sponsored Star-Planet Activity
+            Research CubeSat (SPARCS), and the Black Hole Coded Aperture
+            Telescope (BlackCAT) CubeSat, inside a SpaceX Falcon 9 payload
+            fairing. A SpaceX Falcon 9 rocket carrying NASA’s Pandora small
+            satellite lifted off at 5:44 a.m. PST Sunday, Jan. 11, from Space
+            Launch Complex 4 East at Vandenberg Space Force Base located on
+            California’s central coast. During its initial year, Pandora will
+            provide an in-depth study of at least 20 known planets orbiting
+            distant stars to determine the composition of their atmospheres —
+            especially the presence of hazes, clouds, and water.
           </p>
           <Link to="/image-of-day" className={styles.archiveLink}>
             Browse Image Archive
@@ -59,11 +65,11 @@ const Imageofday = () => {
         {/* RIGHT IMAGE */}
         <div className={styles.imageWrapper}>
           <img
-            src="https://www.nasa.gov/wp-content/uploads/2026/01/55016654116-5bdeaacd9f-o-1.jpg?resize=400,278"
+            src="https://www.nasa.gov/wp-content/uploads/2026/01/ksc-20260111-ph-spx01-0001orig.jpg"
             alt="Image of the Day"
             onClick={() =>
               openLightbox(
-                "https://www.nasa.gov/wp-content/uploads/2026/01/55016654116-5bdeaacd9f-o-1.jpg?resize=400,278"
+                "https://www.nasa.gov/wp-content/uploads/2026/01/ksc-20260111-ph-spx01-0001orig.jpg"
               )
             }
             style={{ cursor: "pointer" }}
@@ -75,7 +81,7 @@ const Imageofday = () => {
             onClick={(e) => {
               e.preventDefault();
               openLightbox(
-                "https://www.nasa.gov/wp-content/uploads/2026/01/55016654116-5bdeaacd9f-o-1.jpg?resize=400,278"
+                "https://www.nasa.gov/wp-content/uploads/2026/01/ksc-20260111-ph-spx01-0001orig.jpg"
               );
             }}
           >
