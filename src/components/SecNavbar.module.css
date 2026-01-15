@@ -1,73 +1,143 @@
 /* ================= HEADER ================= */
-
 .header {
   position: fixed;
   top: 0;
   width: 100%;
   height: 65px;
-  padding: 0 40px;
-  background-color: black;
-
+  padding: 24px 40px;
+  background-color: transparent; /* starts transparent over hero */
   z-index: 100;
+  opacity: 1;
 
   display: flex;
   align-items: center;
+  justify-content: space-between;
+
+  transition: transform 0.45s ease, opacity 0.35s ease,
+    background-color 0.4s ease;
 }
 
-/* ================= LEFT ================= */
+.hide {
+  transform: translateY(-100%);
+  opacity: 0;
+}
 
+/* header when scrolled */
+.scrolled {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* ================= LEFT SECTION ================= */
 .left {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 35px;
 }
-
-/* ================= LOGO ================= */
 
 .spacexLogo {
   width: 160px;
   height: 30px;
-  filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1); /* makes logo white */
+  transition: filter 0.25s ease, transform 0.25s ease;
+  cursor: default;
 }
 
-/* ================= NAV ================= */
+/* logo hover → brighter with subtle glow */
+.logoLink:hover .spacexLogo {
+  filter: brightness(0) invert(1) drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
+}
 
+/* ================= NAVIGATION ================= */
 .nav {
   display: flex;
   align-items: center;
+  gap: 36px;
 }
 
-/* ================= ACTIVE LABEL ================= */
-
-.activeLabel {
+/* nav links default style */
+.nav a,
+.nav span {
   font-family: "D-DIN", "DIN", "Arial", sans-serif;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
   font-size: 13px;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.9);
+  position: relative;
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.25s ease;
   cursor: default;
+}
 
+/* dim all links when nav is hovered */
+.nav:hover a,
+.nav:hover span {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+/* hovered link → bright */
+.nav a:hover,
+.nav span:hover {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* ================= DROPDOWN ================= */
+.dropdown {
   position: relative;
 }
 
-/* subtle indicator line (like SpaceX / NASA dashboards) */
-.activeLabel::after {
+/* small spacing under dropdown label */
+.dropdown::after {
+  content: "";
   position: absolute;
+  top: 100%;
   left: 0;
-  bottom: -6px;
   width: 100%;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.4);
+  height: 30px;
+  pointer-events: none;
 }
 
-.logoLink {
+/* dropdown menu hidden by default */
+.menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
   display: flex;
-  align-items: center;
-  text-decoration: none;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 220px;
+  padding: 12px 0;
+  background-color: rgba(0, 0, 0, 0.85); /* subtle dark bg */
+  border-radius: 6px;
+
+  opacity: 0;
+  transform: translateY(-8px);
+  pointer-events: none;
+
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
-/* logo hover → extra bright */
-.logoLink:hover .spacexLogo {
-  filter: brightness(0) invert(1) drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
+
+/* dropdown links default */
+.menu a {
+  color: rgba(255, 255, 255, 0.55);
+  padding: 6px 20px;
+  transition: color 0.25s ease;
+  cursor: pointer;
+}
+
+/* dropdown link hover */
+.menu a:hover {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* label stays dim when menu is open */
+.dropdown:hover > span {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+/* show menu on hover */
+.dropdown:hover .menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }

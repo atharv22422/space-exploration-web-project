@@ -74,10 +74,21 @@
 .viewToggle button {
   border: 1px solid rgba(0, 0, 0, 0.3);
   background: transparent;
-  padding: 8px 14px;
+
+  padding: 10px 18px; /* ✅ THIS creates space inside */
+
   cursor: pointer;
-  font-size: 16px;
+  font-size: 18px;
   transition: all 0.25s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.viewToggle {
+  display: flex;
+  gap: 20px; /* 👈 controls space between buttons */
 }
 
 .viewToggle button:hover {
@@ -118,8 +129,8 @@
 }
 
 .card img {
-  width: 160px;
-  height: 100px;
+  width: 190px;
+  height: 130px;
   object-fit: cover;
   border-radius: 8px;
   transition: transform 0.3s ease;

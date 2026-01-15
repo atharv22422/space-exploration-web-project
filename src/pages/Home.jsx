@@ -3,11 +3,11 @@ import Footer from "../components/Footer";
 import FeaturedNews from "../components/FeaturedNews";
 import Navbar from "../components/Navbar";
 import styles from "./Home.module.css";
-
+import GamesSos from "../components/GamesCTA";
 import ExploreSection from "../components/ExploreSection";
 import Imageofday from "../components/Imageofday";
 import Whatsup from "../components/Whatsup";
-import Learnmore from "../components/Learnmore";
+import InfograCTA from "../components/InfograCTA";
 import Herobanner from "../components/Herobanner";
 
 function Home() {
@@ -18,9 +18,9 @@ function Home() {
       <Aboutus />
       <Whatsup />
       <FeaturedNews />
-      <Learnmore />
+      <GamesSos />
       <ExploreSection />
-      <Learnmore />
+      <InfograCTA />
       <Imageofday />
       <Footer />
     </div>

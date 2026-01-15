@@ -1,16 +1,16 @@
 .aboutBMC {
-  background-color: #f0f0fae6;
+  background-color: #fff;
   color: #111;
   font-family: "D-DIN", "DIN", "Arial", sans-serif;
-  padding: 130px 60px 80px;
+  padding: 100px 60px 80px;
 }
 
 /* ===== TITLE ===== */
 .aboutus {
   width: 100%;
-  font-size: 3rem;
+  font-size: 3.2rem;
   font-weight: 700;
-  text-transform: uppercase;
+
   display: flex;
   align-items: center;
   gap: 16px;
@@ -66,18 +66,26 @@
 }
 
 /* ===== SVG ===== */
-.aboutusLink {
-  text-decoration: none;
-  display: inline-block;
+.aboutText {
+  max-width: 920px;
+
+  font-family: "D-DIN", "DIN", "Arial", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.9;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  text-align: justify;
+  text-justify: inter-word;
+
+  word-spacing: 0.04em;
+  letter-spacing: 0.02em;
 }
 
-.aboutus {
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-  color: #ffffff;
+/* Inline emphasis — NOT block */
+.aboutText strong {
   font-weight: 600;
-  cursor: pointer;
+  color: rgba(255, 255, 255, 0.95);
 }
 
 /* SVG base */
@@ -98,8 +106,6 @@
 .aboutusLink:hover .arrowIcon {
   transform: translateX(4px);
 }
-
-
 
 /* ===== MANIFESTO ===== */
 .aboutSection {
@@ -134,7 +140,6 @@
   color: #333;
 }
 
-
 .imageWrapper img {
   transition: transform 0.3s ease;
 }
@@ -142,7 +147,6 @@
 .imageWrapper img:hover {
   transform: scale(1.03);
 }
-
 
 .aboutusLink {
   text-decoration: none;

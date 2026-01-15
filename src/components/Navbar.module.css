@@ -8,12 +8,10 @@
   padding: 24px 40px;
   background: transparent;
   z-index: 100;
- 
+
   opacity: 1;
 
-  transition:
-    transform 0.45s ease,
-    opacity 0.35s ease,
+  transition: transform 0.45s ease, opacity 0.35s ease,
     background-color 0.4s ease;
 }
 
@@ -30,20 +28,17 @@
 
 .left {
   display: flex;
- align-items: flex-start; 
+  align-items: flex-start;
   gap: 35px;
-
 }
 
 .spacexLogo {
   width: 160px;
   filter: brightness(0) invert(1);
   opacity: 1;
-height: 30px;
-  transition:
-    filter 0.25s ease,
-    transform 0.25s ease;
-      cursor: default;
+  height: 30px;
+  transition: filter 0.25s ease, transform 0.25s ease;
+  cursor: default;
 }
 
 /* logo hover → extra bright */
@@ -51,19 +46,16 @@ height: 30px;
   filter: brightness(0) invert(1) drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 }
 
-
-
 /* ================= NAV ================= */
 
 .nondropdown {
-
   padding-top: 2px;
 }
 .nav {
   display: flex;
   align-items: flex-start;
   gap: 36px;
-      padding-top: 3px;
+  padding-top: 3px;
 }
 
 /* default (slightly dim) */
@@ -76,7 +68,7 @@ height: 30px;
   font-weight: 700;
   text-decoration: none;
   position: relative;
-   color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8);
   transition: color 0.25s ease;
   cursor: default;
 }
@@ -84,7 +76,7 @@ height: 30px;
 /* dim all when nav is hovered */
 .nav:hover a,
 .nav:hover span {
-   color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.25);
 }
 
 /* hovered main item → bright */
@@ -118,19 +110,17 @@ height: 30px;
   gap: 12px;
   min-width: 220px;
   padding: 12px 0px;
- background: transparent;
+  background: transparent;
   opacity: 0;
   transform: translateY(-8px);
   pointer-events: none;
 
-  transition:
-    opacity 0.25s ease,
-    transform 0.25s ease;
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
 /* dropdown items default */
 .menu a {
-   color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.55);
   transition: color 0.25s ease;
   cursor: default;
 }
@@ -142,12 +132,11 @@ height: 30px;
 
 /* dropdown label stays dim when open */
 .dropdown:hover > span {
-   color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.25);
 }
 
-/* show menu */
-.dropdown:hover .menu {
+/* show menu .dropdown:hover .menu {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
-}
+} */

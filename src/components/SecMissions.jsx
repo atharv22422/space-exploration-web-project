@@ -1,79 +1,101 @@
 import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import styles from "./Missions.module.css"; // reuse same CSS
+import { Link } from "react-router-dom";
+import styles from "./SecMissions.module.css"; // reuse same CSS
 
-export default function SecBody() {
+export default function SecMissions() {
   const [view, setView] = useState("list");
 
-  // ✅ GET ID FROM URL
-  const { id } = useParams();
-
   /* =======================
-     EVENTS DATA
+     SPACE MISSIONS DATA
   ======================= */
-  const events = [
+  const missions = [
     {
-      id: 1,
-      category: "SOLAR SYSTEM | ECLIPSE",
-      title: "Total Solar Eclipse",
+      id: "artemis-ii",
+      type: "HUMAN SPACEFLIGHT | LUNAR MISSION",
+      title: "Artemis II",
       description:
-        "A total solar eclipse occurs when the Moon completely blocks the Sun, casting a shadow on Earth.",
-      date: "April 8, 2024",
-      visibility: "North America",
+        "NASA’s first crewed mission under the Artemis program, designed to test deep-space systems and prepare for sustained human presence on the Moon.",
+      date: "Planned: 2025",
+      agency: "NASA",
       image:
-        "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/general/images/2023/06/s/solar-system-illustration-16x9-1.jpg?w=1536&h=864",
+        "http://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Artemis_II_Orion_Solar_Array_Wings_Installed_%28jsc2025e016293%29.jpg/500px-Artemis_II_Orion_Solar_Array_Wings_Installed_%28jsc2025e016293%29.jpg",
     },
     {
-      id: 2,
-      category: "METEORS | SHOWER",
-      title: "Perseids Meteor Shower",
+      id: "perseverance",
+      type: "PLANETARY SCIENCE | ROVER MISSION",
+      title: "Mars Perseverance Rover",
       description:
-        "One of the brightest meteor showers of the year, caused by debris from Comet Swift–Tuttle.",
-      date: "Aug 12–13, 2025",
-      visibility: "Northern Hemisphere",
+        "A robotic rover exploring Mars to study its geology, search for signs of ancient life, and collect samples for future return to Earth.",
+      date: "Launched: Jul 30, 2020",
+      agency: "NASA",
       image:
-        "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/general/images/2023/06/s/solar-system-illustration-16x9-1.jpg?w=1536&h=864",
+        "https://science.nasa.gov/wp-content/uploads/2017/12/pia26344-perseverance-selfie-at-cheyava-mars2020home-1920x640-1.jpg?resize=1536,512",
     },
     {
-      id: 3,
-      category: "ATMOSPHERIC | AURORA",
-      title: "Aurora Borealis",
+      id: "jwst",
+      type: "SPACE ASTRONOMY | SPACE TELESCOPE",
+      title: "James Webb Space Telescope",
       description:
-        "Natural light display produced by charged solar particles interacting with Earth's magnetic field.",
-      date: "Ongoing",
-      visibility: "High Latitude Regions",
+        "A next-generation space observatory studying the universe in infrared light to understand galaxy formation and exoplanets.",
+      date: "Launched: Dec 25, 2021",
+      agency: "NASA / ESA / CSA",
       image:
-        "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/general/images/2023/06/s/solar-system-illustration-16x9-1.jpg?w=1536&h=864",
+        "https://science.nasa.gov/wp-content/uploads/2024/05/jwst_artist_concept_0.png",
     },
   ];
 
   /* =======================
-     SELECTED EVENT (BY ID)
+     MISSION FILTER SIDEBAR
   ======================= */
-  const selectedEvent = id ? events.find((e) => e.id === Number(id)) : null;
-
-  /* =======================
-     EVENT FILTER SIDEBAR
-  ======================= */
-  const eventFilters = [
+  const missionFilters = [
     [
-      "Solar System Events",
+      "Human Spaceflight",
       [
-        "Solar Eclipse (Total)",
-        "Solar Eclipse (Partial)",
-        "Lunar Eclipse",
-        "Planetary Conjunction",
-        "Full Moon",
-        "Supermoon",
+        "Orbital Flights",
+        "Space Station Expeditions",
+        "Lunar Missions",
+        "Deep Space / Mars Missions",
+        "Commercial Crew & Resupply",
+        "Space Tourism",
       ],
     ],
     [
-      "Transient & Small Body Events",
-      ["Meteor Shower", "Fireball", "Comet", "Asteroid Close Approach"],
+      "Planetary Science & Exploration",
+      [
+        "Flyby Missions",
+        "Orbiter Missions",
+        "Lander Missions",
+        "Rover Missions",
+        "Atmospheric Probes",
+        "Sample Return Missions",
+      ],
     ],
     [
-      "Atmospheric Optical Phenomena",
-      ["Aurora Borealis", "Solar Halo", "Sun Dog"],
+      "Space Astronomy & Astrophysics",
+      [
+        "Space Telescopes",
+        "Observatory Spacecraft",
+        "Sounding Rockets & Balloons",
+        "Astrophysics Experiments",
+      ],
+    ],
+    [
+      "Earth Science & Observation",
+      [
+        "Earth Observation Satellites",
+        "Weather Monitoring",
+        "Climate Change Research",
+        "Disaster Monitoring",
+      ],
+    ],
+    [
+      "Technology Development",
+      [
+        "Mission Demonstrations",
+        "Experimental Spacecraft",
+        "New Propulsion Systems",
+        "Autonomous Navigation Tests",
+      ],
     ],
   ];
 
@@ -83,7 +105,7 @@ export default function SecBody() {
           SIDEBAR
       ======================= */}
       <aside className={styles.sidebar}>
-        {eventFilters.map(([title, items]) => (
+        {missionFilters.map(([title, items]) => (
           <div key={title} className={styles.filterGroup}>
             <h4>{title}</h4>
             {items.map((item) => (
@@ -103,13 +125,8 @@ export default function SecBody() {
         {/* TOP BAR */}
         <div className={styles.topBar}>
           <div>
-            Showing <strong>{events.length}</strong> results
-            {selectedEvent && (
-              <>
-                {" "}
-                • Viewing: <strong>{selectedEvent.title}</strong>
-              </>
-            )}
+            Showing <strong>1–{missions.length}</strong> of{" "}
+            <strong>{missions.length}</strong> space missions
           </div>
 
           <div className={styles.viewToggle}>
@@ -130,22 +147,22 @@ export default function SecBody() {
 
         {/* RESULTS */}
         <div className={view === "grid" ? styles.grid : styles.list}>
-          {events.map((e) => (
+          {missions.map((m) => (
             <Link
-              key={e.id}
-              to={`/missions/${e.id}`} // ✅ FIXED LINK
+              key={m.id}
+              to={`/missions/${m.id}`}
               className={styles.cardLink}
             >
               <div className={styles.card}>
                 <div className={styles.text}>
-                  <span className={styles.type}>{e.category}</span>
-                  <h3>{e.title}</h3>
-                  <p>{e.description}</p>
+                  <span className={styles.type}>{m.type}</span>
+                  <h3>{m.title}</h3>
+                  <p>{m.description}</p>
                   <span className={styles.date}>
-                    {e.date} • {e.visibility}
+                    {m.date} • {m.agency}
                   </span>
                 </div>
-                <img src={e.image} alt={e.title} />
+                <img src={m.image} alt={m.title} />
               </div>
             </Link>
           ))}

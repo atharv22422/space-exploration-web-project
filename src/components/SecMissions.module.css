@@ -71,6 +71,11 @@
 }
 
 /* ===== VIEW TOGGLE ===== */
+
+.viewToggle {
+  display: flex;
+  gap: 20px;
+}
 .viewToggle button {
   border: 1px solid rgba(0, 0, 0, 0.3);
   background: transparent;
@@ -118,8 +123,8 @@
 }
 
 .card img {
-  width: 160px;
-  height: 100px;
+  width: 190px;
+  height: 130px;
   object-fit: cover;
   border-radius: 8px;
   transition: transform 0.3s ease;

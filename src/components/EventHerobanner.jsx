@@ -1,34 +1,31 @@
 import styles from "./EventHerobanner.module.css";
-import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { eventData } from "../data/eventData"; // same data as EventBody
 
 const EventHerobanner = () => {
+  const { id } = useParams();
+
+  // Find the event/mission/cosmic item based on URL ID
+  const data = eventData.find((item) => item.id === id);
+
+  if (!data) return null; // fallback if ID is invalid
+
   return (
     <section className={styles.hero}>
+      {/* Background Image */}
       <img
-        src="https://www.nasa.gov/wp-content/uploads/2024/10/50999379344-b7db5dd107-o-1.jpg?resize=1536,1024"
-        alt="Astronauts in spacesuits"
+        src={data.image}
+        alt={data.title}
         className={styles.backgroundImage}
       />
 
+      {/* Overlay */}
       <div className={styles.overlay} />
 
+      {/* Hero Content */}
       <div className={styles.content}>
-        <h1 className={styles.title}>
-          NASA’s Pandora Satellite, Explore Exoplanets
-        </h1>
-
-        <p className={styles.description}>
-          Astronauts train for a variety of missions, including performing
-          research on the International Space Station, launching from American
-          soil on spacecraft built by commercial companies, and preparing for
-          missions to the Moon with Artemis.
-        </p>
-
-        <Link to="/live-space">
-          <button className={styles.button}>
-            Learn More <span className={styles.arrow}>→</span>
-          </button>
-        </Link>
+        <h1 className={styles.title}>{data.title}</h1>
+        <p className={styles.description}>{data.summary}</p>
       </div>
     </section>
   );
