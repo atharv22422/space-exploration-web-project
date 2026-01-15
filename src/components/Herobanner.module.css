@@ -12,7 +12,11 @@
 .hero {
   position: relative;
   width: 100vw;
-  height: 940px; /* increase/decrease as needed */
+  height: 940px;
+
+  /* 👇 THIS IS THE KEY LINE */
+  margin-top: -65px;
+
   overflow: hidden;
 }
 

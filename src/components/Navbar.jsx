@@ -1,41 +1,48 @@
-import { Link } from "react-router-dom";
-import { useState, useEffect, useRef } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
 import CroppedImage from "../assets/CroppedImage.png";
 import styles from "./Navbar.module.css";
 
 function Navbar() {
-  const [hideHeader, setHideHeader] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const lastScrollY = useRef(0);
+  const [hidden, setHidden] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+    const onScroll = () => {
+      const currentY = window.scrollY;
 
-      setScrolled(currentScrollY > 50);
-
-      if (currentScrollY > lastScrollY.current && currentScrollY > 80) {
-        setHideHeader(true);
+      // hide on scroll down, show on scroll up
+      if (currentY > lastScrollY.current && currentY > 80) {
+        setHidden(true);
       } else {
-        setHideHeader(false);
+        setHidden(false);
       }
 
-      lastScrollY.current = currentScrollY;
+      // add background after slight scroll
+      setScrolled(currentY > 20);
+
+      lastScrollY.current = currentY;
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
     <header
-      className={`${styles.header} ${hideHeader ? styles.hide : ""} ${
-        scrolled ? styles.scrolled : ""
-      }`}
+      className={`${styles.header} 
+      ${hidden ? styles.hide : ""} 
+      ${scrolled ? styles.scrolled : ""}`}
     >
       <div className={styles.left}>
         <Link to="/" className={styles.logoLink}>
-          <img src={CroppedImage} alt="Logo" className={styles.spacexLogo} />
+          <img
+            src={CroppedImage}
+            alt="SpaceX Logo"
+            className={styles.spacexLogo}
+          />
         </Link>
 
         <nav className={styles.nav}>

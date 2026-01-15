@@ -5,6 +5,8 @@
   overflow: hidden;
   display: flex;
   align-items: center;
+  /* 👇 THIS IS THE KEY LINE */
+  margin-top: -65px;
 }
 
 /* Background Image */
